@@ -1,7 +1,22 @@
 const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 let currentPage = 1;
-
+document.addEventListener('DOMContentLoaded', () => {
+  // Get the current URL pathname
+  const pathname = window.location.pathname;
+  
+  // Check if the pathname starts with /id/
+  if (pathname.startsWith('/id/')) {
+      // Extract the movie ID from the pathname
+      const id = pathname.substring(4); // Remove '/id/' from the beginning
+      
+      // Call your function to fetch data using the id
+      fetchMovieDetails(id);
+      
+      // Redirect to the homepage
+      window.location.href = '/';
+  }
+});
 const options = {
   method: 'GET',
   headers: {

@@ -1,7 +1,2 @@
 RewriteEngine On
-
-# Redirect /id/<id> to the homepage
-RewriteRule ^id/(\d+)$ / [R=301,L]
-
-# Pass the captured <id> parameter to a JavaScript file
-RewriteRule ^id/(\d+)$ script.js?id=$1 [L,QSA]
+RewriteRule ^id/([0-9]+)$ /?id=$1 [QSA,L]
