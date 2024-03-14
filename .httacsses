@@ -1,3 +1,7 @@
-# Redirect /id to the appropriate URL
 RewriteEngine On
-RewriteRule ^id/(\d+)$ https://example.com/movie/ [R=301,L]
+
+# Redirect /id/<id> to the homepage
+RewriteRule ^id/(\d+)$ / [R=301,L]
+
+# Pass the captured <id> parameter to a JavaScript file
+RewriteRule ^id/(\d+)$ script.js?id=$1 [L,QSA]
