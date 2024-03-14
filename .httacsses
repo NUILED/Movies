@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^$nuiled.github.io/Movies/ nuiled.github.io/Movies/ [L]
+RewriteRule ^Movies/tt[0-9]+/?$ /Movies [L,R=301]
