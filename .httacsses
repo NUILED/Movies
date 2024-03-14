@@ -1,0 +1,3 @@
+# Redirect /id to the appropriate URL
+RewriteEngine On
+RewriteRule ^id/(\d+)$ https://example.com/movie/$1 [R=301,L]
