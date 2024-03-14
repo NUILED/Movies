@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const pathname = window.location.pathname;
   
   // Check if the pathname starts with /id/
-  if (pathname.startsWith('/id/')) {
+  if (pathname.startsWith('/')) {
       // Extract the movie ID from the pathname
-      const id = pathname.substring(4); // Remove '/id/' from the beginning
+      const id = pathname.substring(1); // Remove '/id/' from the beginning
       
       // Call your function to fetch data using the id
       fetchMovieDetails(id);
