@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^$ /Movies [L]
+RewriteRule ^$ /Movies/404 [L]
