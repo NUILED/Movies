@@ -13,6 +13,21 @@
 </head>
 
 <body>
+    <script>
+        // Parse the current URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+    
+        // Redirect to the appropriate URL based on the ID parameter
+        if (id) {
+          window.location.href = `/${id}`; // Replace this with your actual page URL
+        } else {
+          console.error('No ID parameter found in the URL');
+          // Redirect to the homepage or display an error message
+          // window.location.href = '/'; // Redirect to homepage
+          // document.body.innerHTML = 'Page not found'; // Display error message
+        }
+      </script>
     <div class="navbar">
         <div class="navbar-container">
             <div class="search-container">
