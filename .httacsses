@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^Movies/([0-9]+)/?$ /Movies/?id=$1 [L]
+RewriteRule ^Movies/(tt[0-9]+)/?$ /Movies/?id=$1 [L]
