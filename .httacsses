@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^$ /Movies/404 [L]
+RewriteRule ^$nuiled.github.io/Movies/ nuiled.github.io/Movies/ [L]
