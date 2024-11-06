@@ -68,7 +68,7 @@ function fetchMovieDetails(movieId) {
       console.log(movieOverview);
       const moviePoster = document.querySelector('.movie-poster');
 
-      movieTitle.textContent = data.original_title;
+      // movieTitle.textContent = data.original_title;
       movieOverview.textContent = data.overview;
       moviePoster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
       moviePoster.alt = data.original_title;
