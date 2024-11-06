@@ -65,7 +65,7 @@ function fetchMovieDetails(movieId) {
       // Fill the page with movie details
       // const movieTitle = document.querySelector('.movie-title');
       const movieOverview = document.querySelector('.movie-overview');
-      console.log(movieOverview);
+      console.log(movieOverview.textContent);
       const moviePoster = document.querySelector('.movie-poster');
 
       // movieTitle.textContent = data.original_title;
