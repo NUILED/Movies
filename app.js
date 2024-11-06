@@ -2,17 +2,13 @@ const arrows = document.querySelectorAll(".arrow");
 const movieLists = document.querySelectorAll(".movie-list");
 let currentPage = 1;
 document.addEventListener('DOMContentLoaded', () => {
-  // Get the current URL pathname
+
   const pathname = window.location.pathname;
   
-  // Check if the pathname starts with /id/
   if (pathname.startsWith('/')) {
       const urlParams = new URLSearchParams(window.location.search);
       const slug = urlParams.get('id');
-      // Call your function to fetch data using the id
       fetchMovieDetails(slug);
-      // Redirect to the homepage
-      // window.location.href = '/';
   }
 });
 const options = {
@@ -76,54 +72,6 @@ function fetchMovieDetails(movieId) {
       console.error('Error fetching movie details:', error);
     });
 }
-
-// Fetch movie details using the extracted ID
-fetchMovieDetails(idParam);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const listItems = document.querySelectorAll('.movie-list-item');
-    
-    listItems.forEach((item, index) => {
-      item.addEventListener('click', () => {
-        window.location.reload();
-  
-        localStorage.setItem('clickedItemIndex', index);
-      });
-    });
-  
-    // Check if there's a stored clicked item index
-    const clickedItemIndex = localStorage.getItem('clickedItemIndex');
-    
-    if (clickedItemIndex !== null) {
-      fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        const list = data.results;
-        const featuredMovie = list[clickedItemIndex]; 
-    
-        const featuredContent = document.querySelector('.featured-content');
-        const img = "https://image.tmdb.org/t/p/w500/" + featuredMovie.poster_path;
-        const bg = "https://image.tmdb.org/t/p/w1280/" + featuredMovie.backdrop_path;
-    
-        featuredContent.style.background = `linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('${bg}')`;
-    
-        const featuredTitle = featuredContent.querySelector('.featured-title');
-        featuredTitle.src = img;
-        featuredTitle.alt = featuredMovie.original_title;
-    
-        const featuredDesc = featuredContent.querySelector('.featured-desc');
-        featuredDesc.textContent = featuredMovie.overview;
-    
-        const featuredButton = featuredContent.querySelector('.featured-button');
-        featuredButton.textContent = 'WATCH';
-      })
-      .catch(error => {
-        console.error('Error fetching movies:', error);
-      });    
-      localStorage.removeItem('clickedItemIndex');
-    }
-});
 
 function showPopupAfterDelay() {
   setTimeout(function() {
