@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Call your function to fetch data using the id
       fetchMovieDetails(id);
       // Redirect to the homepage
-      window.location.href = '/';
+      // window.location.href = '/';
   }
 });
 const options = {
