@@ -63,9 +63,9 @@ function fetchMovieDetails(movieId) {
     .then(response => response.json())
     .then(data => {
       // Fill the page with movie details
-      const movieTitle = document.querySelector('.movie-title');
-      console.log(movieTitle);
+      // const movieTitle = document.querySelector('.movie-title');
       const movieOverview = document.querySelector('.movie-overview');
+      console.log(movieOverview);
       const moviePoster = document.querySelector('.movie-poster');
 
       movieTitle.textContent = data.original_title;
