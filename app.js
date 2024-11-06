@@ -65,7 +65,7 @@ function fetchMovieDetails(movieId) {
       
       // movieTitle.textContent = data.original_title;
       movieOverview.textContent = data.overview;
-      moviePoster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+      moviePoster.src = `https://image.tmdb.org/t/p/w300/${data.poster_path}`;
       moviePoster.alt = data.original_title;
 
     })
