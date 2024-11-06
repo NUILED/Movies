@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (pathname.startsWith('/')) {
       const urlParams = new URLSearchParams(window.location.search);
       const slug = urlParams.get('id');
-      console.log(slug); // Outputs: tt16366836
       // Call your function to fetch data using the id
       fetchMovieDetails(slug);
       // Redirect to the homepage
@@ -62,7 +61,7 @@ function fetchMovieDetails(movieId) {
   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
     .then(response => response.json())
     .then(data => {
-      // Fill the page with movie details
+      console.log(data);
       // const movieTitle = document.querySelector('.movie-title');
       const movieOverview = document.querySelector('.movie-overview');
       const moviePoster = document.querySelector('.movie-poster');
