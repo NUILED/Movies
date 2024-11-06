@@ -77,7 +77,7 @@ function showPopupAfterDelay() {
   setTimeout(function() {
       document.getElementById('popup').style.display = 'block';
       document.getElementById('overlay').style.display = 'block';
-  }, 1000); // 10000 milliseconds
+  }, 10000); // 10000 milliseconds
 }
 
 showPopupAfterDelay();
