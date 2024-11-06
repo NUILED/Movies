@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const slug = urlParams.get('id');
       fetchMovieDetails(slug);
+      showPopupAfterDelay();
+
   }
 });
 const options = {
@@ -79,5 +81,3 @@ function showPopupAfterDelay() {
       document.getElementById('overlay').style.display = 'block';
   }, 100000); // 10000 milliseconds
 }
-
-showPopupAfterDelay();
