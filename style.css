@@ -325,3 +325,14 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+.movie-button {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
