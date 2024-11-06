@@ -65,13 +65,13 @@ function fetchMovieDetails(movieId) {
       // Fill the page with movie details
       // const movieTitle = document.querySelector('.movie-title');
       const movieOverview = document.querySelector('.movie-overview');
-      console.log(movieOverview.textContent);
       const moviePoster = document.querySelector('.movie-poster');
-
+      
       // movieTitle.textContent = data.original_title;
       movieOverview.textContent = data.overview;
-      moviePoster.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+      moviePoster.src = `https://image.tmdb.org/t/p/w200/${data.poster_path}`;
       moviePoster.alt = data.original_title;
+      console.log(movieOverview.textContent);
     })
     .catch(error => {
       console.error('Error fetching movie details:', error);
