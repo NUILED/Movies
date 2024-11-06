@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Check if the pathname starts with /id/
   if (pathname.startsWith('/')) {
-    // Extract the movie ID from the pathname
-    const id = pathname.substring(1); // Remove '/id/' from the beginning
-    console.log(id)
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get('id');
+      console.log(slug); // Outputs: tt16366836
       // Call your function to fetch data using the id
-      fetchMovieDetails(id);
+      fetchMovieDetails(slug);
       // Redirect to the homepage
       // window.location.href = '/';
   }
