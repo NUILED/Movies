@@ -61,7 +61,6 @@ function fetchMovieDetails(movieId) {
   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       // const movieTitle = document.querySelector('.movie-title');
       const movieOverview = document.querySelector('.movie-overview');
       const moviePoster = document.querySelector('.movie-poster');
@@ -70,7 +69,6 @@ function fetchMovieDetails(movieId) {
       movieOverview.textContent = data.overview;
       moviePoster.src = `https://image.tmdb.org/t/p/w92/${data.poster_path}`;
       moviePoster.alt = data.original_title;
-      console.log(movieOverview.textContent);
     })
     .catch(error => {
       console.error('Error fetching movie details:', error);
@@ -98,7 +96,6 @@ fetchMovieDetails(idParam);
       fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         const list = data.results;
         const featuredMovie = list[clickedItemIndex]; 
     
