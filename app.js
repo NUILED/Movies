@@ -62,12 +62,9 @@ function fetchMovieDetails(movieId) {
   fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
-      console.log(data.original_title);
-      console.log(data.overview);
-
       // Fill the page with movie details
       const movieTitle = document.querySelector('.movie-title');
+      console.log(movieTitle);
       const movieOverview = document.querySelector('.movie-overview');
       const moviePoster = document.querySelector('.movie-poster');
 
