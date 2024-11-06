@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const slug = urlParams.get('id');
       fetchMovieDetails(slug);
-      showPopupAfterDelay();
 
   }
 });
